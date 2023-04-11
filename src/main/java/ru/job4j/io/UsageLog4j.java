@@ -11,5 +11,11 @@ public class UsageLog4j {
         String name = "Petr Arsentev";
         int age = 33;
         LOG.debug("User info name : {}, age : {}", name, age);
+        LOG.trace("User info name : {}, age : {}", name, age);
+        try {
+            throw new Exception("Not supported code");
+        } catch (Exception e) {
+            LOG.error("Exception in log example", e);
+        }
     }
 }
